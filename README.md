@@ -15,5 +15,5 @@ pip install image-printer
 Simply run the example:
 
 ```shell
-python example.py --path=nene.jpeg
+python example.py --path=<file_name.jpeg> --ratio=2 --scale=0.05
 ```

@@ -1,6 +1,5 @@
 from typing import Any, List
 import cv2
-import os
 
 DEFAULT_COLOR_CODE_FORMAT = "\033[38;2;{r};{g};{b}m{text}\033[0;00m"
 
@@ -30,7 +29,6 @@ def load_image(file_path: str, x_scale: float = 0.05, y_x_ratio: float = 2) -> A
 
 def print_image(file_path: str, x_scale: float = 0.05, y_x_ratio: float = 2, gray_scale_symbol_list: List[str] = DEFAULT_GRAY_SCALE_SYMBOL_LIST):
     image = load_image(file_path, x_scale, y_x_ratio)
-    os.system('cls')
 
     width = image.shape[1]
     height = image.shape[0]

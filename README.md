@@ -7,7 +7,7 @@ Image Printer can convert and print an image as colored text.
 Use pip to install image-printer
 
 ```shell
-    pip install image-printer
+pip install image-printer
 ```
 
 ## Example
@@ -15,5 +15,5 @@ Use pip to install image-printer
 Simply run the example:
 
 ```shell
-    python example.py --path=nene.jpeg
+python example.py --path=nene.jpeg
 ```

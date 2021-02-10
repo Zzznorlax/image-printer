@@ -1,18 +1,23 @@
-# Image Printer
+# Image Printer 🌈
 
 Image Printer can convert and print an image as colored text.
 
 
-## Installation
+## Installation 🖥
 Use pip to install image-printer
 
 ```shell
 pip install image-printer
 ```
 
-## Example
+## Example 🏞
 
-Simply run the example:
+Simply run the example.py with following arguments:
+
+- 🗾 `--path`: Path of the image
+- 🔎 `--scale`: Scales the output image size
+- ↔ `--ratio`: Controls the y / x ratio of the output image
+- ▓ `--reverse`: Reverses the gray scale symbols. If your terminal background is dark themed, and the image you are printing has light themed background, it is recommended that reverse should be set to true.
 
 ```shell
 python example.py --path=<file_name.jpeg> --ratio=2 --scale=0.05 --reverse=true

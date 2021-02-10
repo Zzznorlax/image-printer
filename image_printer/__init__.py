@@ -5,7 +5,6 @@ DEFAULT_COLOR_CODE_FORMAT = "\033[38;2;{r};{g};{b}m{text}\033[0;00m"
 
 # DEFAULT_GRAY_SCALE_SYMBOL_LIST = '@%#*+=-:. '  # 10 levels of gray
 DEFAULT_GRAY_SCALE_SYMBOL_LIST = list('$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~i!lI;:,\"^`". ')  # 70 levels of gray
-DEFAULT_GRAY_SCALE_SYMBOL_LIST.reverse()
 
 
 def color_text(r: int, g: int, b: int, text: str, color_code_format: str = DEFAULT_COLOR_CODE_FORMAT):
@@ -27,11 +26,14 @@ def load_image(file_path: str, x_scale: float = 0.05, y_x_ratio: float = 2) -> A
     return resized_image
 
 
-def print_image(file_path: str, x_scale: float = 0.05, y_x_ratio: float = 2, gray_scale_symbol_list: List[str] = DEFAULT_GRAY_SCALE_SYMBOL_LIST):
+def print_image(file_path: str, x_scale: float = 0.05, y_x_ratio: float = 2, gray_scale_symbol_list: List[str] = DEFAULT_GRAY_SCALE_SYMBOL_LIST, reverse_symbol: bool = True):
     image = load_image(file_path, x_scale, y_x_ratio)
 
     width = image.shape[1]
     height = image.shape[0]
+
+    if reverse_symbol is True:
+        gray_scale_symbol_list.reverse()
 
     for j in range(height):
 
